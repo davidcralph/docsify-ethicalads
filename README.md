@@ -2,7 +2,6 @@
 EthicalAds support for Docsify
 
 ## Usage
-###
 ```js
 <script src='https://unpkg.com/docsify-ethicalads@1.0.1/dist/docsify-ethicalads.js'><script>
 // or
