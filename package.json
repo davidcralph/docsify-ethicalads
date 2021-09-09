@@ -1,22 +1,26 @@
 {
-    "name": "docsify-ethicalads",
-    "version": "1.0.1",
-    "description": "EthicalAds support for Docsify",
-    "author": "David \"ohlookitsderpy\" Ralph",
-    "license": "MIT",
-    "main": "dist/index.js",
-    "bugs": {
-        "url": "https://github.com/ohlookitsderpy/docsify-ethicalads/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ohlookitsderpy/docsify-ethicalads"
-    },
-    "keywords": [
-        "docsify",
-        "plugin",
-        "ads",
-        "advertisements",
-        "adverts"
-    ]
+  "name": "docsify-ethicalads",
+  "version": "1.0.3",
+  "description": "EthicalAds support for Docsify",
+  "author": "David Ralph",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bugs": {
+    "url": "https://github.com/davidjcalph/docsify-ethicalads/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidjcralph/docsify-ethicalads"
+  },
+  "keywords": [
+    "docsify",
+    "plugin",
+    "ads",
+    "advertisements",
+    "adverts",
+    "ethicalads"
+  ],
+  "devDependencies": {
+    "terser": "^5.7.2"
+  }
 }
