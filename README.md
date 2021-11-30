@@ -33,7 +33,13 @@ window.$docsify = {
 
 ``campaignTypes`` - "data-ea-campaign-types" (default: see EthicalAds documentation)
 
-``id`` - Placement ID for the ad element (default: none)
+``placementID`` - Placement ID for the ad element (default: none)
+
+``forceAd`` - Ad to force show for testing (default: none)
+
+``forceCampaign`` - Campaign to force show for testing (default: none)
+
+``manual`` - Require manual loading of ads at a certain time (default: false)
 
 ## Credits
 [docsify-plugin-carbon](https://github.com/waruqi/docsify-plugin-carbon) - Reference

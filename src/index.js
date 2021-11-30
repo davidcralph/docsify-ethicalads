@@ -29,6 +29,18 @@ window.DocsifyEthicalAds = {
             ad.setAttribute('id', options.placementID);
           }
 
+          if (options.forceAd) {
+            ad.setAttribute('data-ea-force-ad', options.forceAd);
+          }
+
+          if (options.forceCampaign) {
+            ad.setAttribute('data-ea-force-campaign', options.forceCampaign);
+          }
+
+          if (options.manual) {
+            ad.setAttribute('data-ea-manual', options.manual);
+          }
+
           if (options.horizontal) {
             ad.classList.add('horizontal');
           } else if (options.type !== 'text') {
