@@ -3,9 +3,9 @@ EthicalAds support for Docsify
 
 ## Usage
 ```html
-<script src='https://unpkg.com/docsify-ethicalads@1.0.3/dist/docsify-ethicalads.js'></script>
+<script src='https://unpkg.com/docsify-ethicalads@1.0.4/dist/docsify-ethicalads.js'></script>
 <!-- or -->
-<script src='https://unpkg.com/docsify-ethicalads@1.0.3/dist/docsify-ethicalads.min.js'></script>
+<script src='https://unpkg.com/docsify-ethicalads@1.0.4/dist/docsify-ethicalads.min.js'></script>
 ```
 
 ```js
