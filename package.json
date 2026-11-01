@@ -1,10 +1,19 @@
 {
   "name": "docsify-ethicalads",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "EthicalAds support for Docsify",
   "author": "David Ralph",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/docsify-ethicalads.js",
+  "unpkg": "dist/docsify-ethicalads.min.js",
+  "jsdelivr": "dist/docsify-ethicalads.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node createdist.js",
+    "prepublishOnly": "npm run build"
+  },
   "bugs": {
     "url": "https://github.com/davidcalph/docsify-ethicalads/issues"
   },

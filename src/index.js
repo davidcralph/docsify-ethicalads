@@ -2,11 +2,11 @@ window.DocsifyEthicalAds = {
   create: (siteName, options) => {
     return (hook) => {
       hook.doneEach(() => {
-        // Create EthicalAds script
-        const script = document.createElement('script');
-        script.src = 'https://media.ethicalads.io/media/client/ethicalads.min.js';
-        script.async = 'async';
-        document.head.appendChild(script);
+        // Sidebar may be hidden (hideSidebar)
+        const sidenav = document.getElementsByClassName('sidebar-nav')[0];
+        if (!sidenav) {
+          return;
+        }
 
         // Create advert
         const ad = document.createElement('div');
@@ -43,9 +43,9 @@ window.DocsifyEthicalAds = {
 
           if (options.horizontal) {
             ad.classList.add('horizontal');
-          } else if (options.type !== 'text') {
+          } else if (options.type !== 'text' && !document.getElementById('docsify-ethicalads-style')) {
             // Only make it work on images
-            document.head.insertAdjacentHTML('beforeend', '<style>.loaded { padding-left: 40px; }</style>');
+            document.head.insertAdjacentHTML('beforeend', '<style id="docsify-ethicalads-style">.sidebar-nav [data-ea-publisher].loaded { padding-left: 40px; }</style>');
           }
 
           if (options.dark) {
@@ -60,8 +60,19 @@ window.DocsifyEthicalAds = {
         }
 
         // Add advert to sidebar
-        const sidenav = document.getElementsByClassName('sidebar-nav')[0];
         sidenav.insertBefore(ad, sidenav.firstChild);
+
+        if (window.ethicalads) {
+          // Client already loaded, re-scan for the new placement
+          window.ethicalads.reload();
+        } else if (!document.getElementById('docsify-ethicalads-client')) {
+          // Load EthicalAds client once, it finds the placement on load
+          const script = document.createElement('script');
+          script.id = 'docsify-ethicalads-client';
+          script.src = 'https://media.ethicalads.io/media/client/ethicalads.min.js';
+          script.async = 'async';
+          document.head.appendChild(script);
+        }
       });
     }
   }
